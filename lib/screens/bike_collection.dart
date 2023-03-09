@@ -14,11 +14,11 @@ class BikesCollection extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Row(children: [
-              TextField(
-                
-              )
-            ],)
+            Row(
+              children: [
+                TextField(),
+              ],
+            )
           ],
         ),
       ),
