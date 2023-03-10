@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import '../components/bikes_staggered_list.dart';
+import '../constants/constants.dart';
+
 class BikesCollection extends StatelessWidget {
   const BikesCollection({super.key});
 
@@ -15,42 +18,53 @@ class BikesCollection extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
-                    child: Container(
-                      color: Colors.white,
-                      child: const TextField(
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        color: Colors.white,
+                        child: const TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(30),
+                              ),
                             ),
-                          ),
-                          prefixIcon: Icon(Icons.search),
-                          contentPadding: EdgeInsets.all(10),
-                          hintText: 'Search your favorite bike',
-                          hintStyle: TextStyle(
-                            fontSize: 12,
+                            prefixIcon: Icon(Icons.search),
+                            contentPadding: EdgeInsets.all(10),
+                            hintText: 'Search your favorite bike',
+                            hintStyle: TextStyle(
+                              fontSize: 12,
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                const Icon(
-                  Icons.bookmark_add_outlined,
-                  color: const Color(0xff100e1c),
-                ),
-              ],
-            )
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  const Icon(
+                    Icons.bookmark_add_outlined,
+                    color: Color(0xff100e1c),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const Expanded(
+              child: BikesStaggerdList(),
+            ),
           ],
         ),
       ),
