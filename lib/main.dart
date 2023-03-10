@@ -1,4 +1,5 @@
 import 'package:enfield_collection/screens/dashboard.dart';
+import 'package:enfield_collection/screens/landing_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Oxygen',
       ),
-      home: const DashBoard(),
+      home: const LandingScreen(),
     );
   }
 }

@@ -18,7 +18,24 @@ class DashboardBottomContent extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-        child: GridView.builder(
+        child: ShaderMask(
+          shaderCallback: (Rect rect) {
+            return const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.center,
+              tileMode: TileMode.mirror,
+              colors: [
+                Colors.purple,
+                Colors.transparent,
+              ],
+              stops: [
+                0.0,
+                0.2,
+              ],
+            ).createShader(rect);
+          },
+          blendMode: BlendMode.dstOut,
+          child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 10,
@@ -57,7 +74,9 @@ class DashboardBottomContent extends StatelessWidget {
                   ),
                 ),
               );
-            }),
+            },
+          ),
+        ),
       ),
     );
   }
