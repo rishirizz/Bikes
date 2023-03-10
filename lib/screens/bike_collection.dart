@@ -38,7 +38,10 @@ class BikesCollection extends StatelessWidget {
                                 Radius.circular(30),
                               ),
                             ),
-                            prefixIcon: Icon(Icons.search),
+                            prefixIcon: Icon(
+                              Icons.search,
+                              size: 26,
+                            ),
                             contentPadding: EdgeInsets.all(10),
                             hintText: 'Search your favorite bike',
                             hintStyle: TextStyle(
