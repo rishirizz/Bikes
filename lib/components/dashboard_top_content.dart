@@ -15,7 +15,7 @@ class DashBoardTopContent extends StatelessWidget {
       child: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/dashboard.jpg'),
+            image: AssetImage('assets/rider1.jpg'),
             fit: BoxFit.cover,
             filterQuality: FilterQuality.high,
           ),
