@@ -14,74 +14,88 @@ class BikesStaggerdList extends StatelessWidget {
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(25),
-          topRight: Radius.circular(25),
+          topLeft: Radius.circular(30),
+          topRight: Radius.circular(30),
         ),
       ),
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Column(
           children: [
-            
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 100,
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 186, 186, 186),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                height: 5,
+                width: 60,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             Expanded(
-              child: ShaderMask(
-                shaderCallback: (Rect rect) {
-                  return const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.center,
-                    tileMode: TileMode.mirror,
-                    colors: [
-                      Colors.purple,
-                      Colors.transparent,
-                    ],
-                    stops: [
-                      0.0,
-                      0.2,
-                    ],
-                  ).createShader(rect);
-                },
-                blendMode: BlendMode.dstOut,
-                child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 20,
-                  ),
-                  itemCount: dashBoardCards.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      elevation: 6,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 15,
+                  childAspectRatio: 1 / 1.5,
+                ),
+                itemCount: bikes.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return GridTile(
+                    footer: Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black54,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(25),
+                          bottomRight: Radius.circular(25),
+                        ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20.0),
+                        padding: const EdgeInsets.only(
+                          left: 20.0,
+                          bottom: 10,
+                          top: 10,
+                        ),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(dashBoardCards[index].cardIcon),
                             Text(
-                              dashBoardCards[index].cardTitle!,
+                              bikes[index].distance!,
                               style: const TextStyle(
-                                fontStyle: FontStyle.italic,
+                                color: Colors.white,
                                 fontSize: 12,
-                                color: Color.fromARGB(255, 56, 73, 179),
+                                fontStyle: FontStyle.italic,
                               ),
                             ),
                             Text(
-                              dashBoardCards[index].cardSubTitle!,
+                              bikes[index].bikeName!,
                               style: const TextStyle(
-                                fontSize: 16,
+                                color: Colors.white,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
                       ),
-                    );
-                  },
-                ),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(25.0),
+                      child: Image.asset(
+                        bikes[index].bikeImage!,
+                        fit: BoxFit.cover,
+                        filterQuality: FilterQuality.high,
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
           ],

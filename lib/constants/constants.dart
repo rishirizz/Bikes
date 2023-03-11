@@ -28,10 +28,28 @@ List<DashBoardCard> dashBoardCards = [
 
 List<Bike> bikes = [
   Bike(
-    bikeName: 'RE Himalayan',
-    bikeImage: 'assets/himalayan.jpg',
-    distance: '11.3 km',
-    rating: '4.1',
+    bikeName: 'RE Interceptor',
+    bikeImage: 'assets/interceptor.jpg',
+    distance: '20.8 km',
+    rating: '4.4',
+  ),
+  Bike(
+    bikeName: 'RE Continental',
+    bikeImage: 'assets/gt.jpg',
+    distance: '5.8 km',
+    rating: '4.3',
+  ),
+  Bike(
+    bikeName: 'RE Hunter',
+    bikeImage: 'assets/hunter.jpg',
+    distance: '17.3 km',
+    rating: '4.7',
+  ),
+  Bike(
+    bikeName: 'RE Meteor 350',
+    bikeImage: 'assets/meteor.jpg',
+    distance: '21.0 km',
+    rating: '4.2',
   ),
   Bike(
     bikeName: 'RE Himalayan',
@@ -40,27 +58,9 @@ List<Bike> bikes = [
     rating: '4.1',
   ),
   Bike(
-    bikeName: 'RE Himalayan',
-    bikeImage: 'assets/himalayan.jpg',
-    distance: '11.3 km',
-    rating: '4.1',
-  ),
-  Bike(
-    bikeName: 'RE Himalayan',
-    bikeImage: 'assets/himalayan.jpg',
-    distance: '11.3 km',
-    rating: '4.1',
-  ),
-  Bike(
-    bikeName: 'RE Himalayan',
-    bikeImage: 'assets/himalayan.jpg',
-    distance: '11.3 km',
-    rating: '4.1',
-  ),
-  Bike(
-    bikeName: 'RE Himalayan',
-    bikeImage: 'assets/himalayan.jpg',
-    distance: '11.3 km',
-    rating: '4.1',
+    bikeName: 'RE Scrambler',
+    bikeImage: 'assets/scrambler.jpg',
+    distance: '4.4 km',
+    rating: '4.0',
   ),
 ];

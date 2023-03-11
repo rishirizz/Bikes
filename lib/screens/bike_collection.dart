@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-
 import '../components/bikes_staggered_list.dart';
-import '../constants/constants.dart';
 
 class BikesCollection extends StatelessWidget {
   const BikesCollection({super.key});
@@ -12,7 +8,7 @@ class BikesCollection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 186, 186, 186),
+        backgroundColor: const Color.fromARGB(255, 186, 186, 186),
         body: Column(
           children: [
             const SizedBox(
