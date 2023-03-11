@@ -1,6 +1,8 @@
 import 'package:enfield_collection/models/dashboard_card_model.dart';
 import 'package:flutter/material.dart';
 
+import '../models/bike_model.dart';
+
 List<DashBoardCard> dashBoardCards = [
   DashBoardCard(
     cardTitle: 'Gas Type',
@@ -21,5 +23,44 @@ List<DashBoardCard> dashBoardCards = [
     cardTitle: 'Last Service',
     cardSubTitle: 'Nov 09, 2022',
     cardIcon: Icons.calendar_month_outlined,
+  ),
+];
+
+List<Bike> bikes = [
+  Bike(
+    bikeName: 'RE Himalayan',
+    bikeImage: 'assets/himalayan.jpg',
+    distance: '11.3 km',
+    rating: '4.1',
+  ),
+  Bike(
+    bikeName: 'RE Himalayan',
+    bikeImage: 'assets/himalayan.jpg',
+    distance: '11.3 km',
+    rating: '4.1',
+  ),
+  Bike(
+    bikeName: 'RE Himalayan',
+    bikeImage: 'assets/himalayan.jpg',
+    distance: '11.3 km',
+    rating: '4.1',
+  ),
+  Bike(
+    bikeName: 'RE Himalayan',
+    bikeImage: 'assets/himalayan.jpg',
+    distance: '11.3 km',
+    rating: '4.1',
+  ),
+  Bike(
+    bikeName: 'RE Himalayan',
+    bikeImage: 'assets/himalayan.jpg',
+    distance: '11.3 km',
+    rating: '4.1',
+  ),
+  Bike(
+    bikeName: 'RE Himalayan',
+    bikeImage: 'assets/himalayan.jpg',
+    distance: '11.3 km',
+    rating: '4.1',
   ),
 ];
