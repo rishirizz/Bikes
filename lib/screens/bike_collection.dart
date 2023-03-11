@@ -63,7 +63,7 @@ class BikesCollection extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 60,
             ),
             const Expanded(
               child: BikesStaggerdList(),
