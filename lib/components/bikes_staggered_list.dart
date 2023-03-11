@@ -114,9 +114,9 @@ class BikesStaggerdList extends StatelessWidget {
                               padding: const EdgeInsets.all(4.0),
                               child: Row(
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.star_rounded,
-                                    color: const Color.fromARGB(
+                                    color: Color.fromARGB(
                                         255, 186, 186, 186),
                                     size: 16,
                                   ),
@@ -125,7 +125,7 @@ class BikesStaggerdList extends StatelessWidget {
                                   ),
                                   Text(
                                     bikes[index].rating!,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,

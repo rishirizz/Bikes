@@ -1,4 +1,3 @@
-import 'package:enfield_collection/screens/dashboard.dart';
 import 'package:enfield_collection/screens/landing_screen.dart';
 import 'package:flutter/material.dart';
 
