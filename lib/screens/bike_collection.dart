@@ -8,7 +8,7 @@ class BikesCollection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 186, 186, 186),
+        backgroundColor: const Color.fromARGB(255, 144, 156, 234),
         body: Column(
           children: [
             const SizedBox(
