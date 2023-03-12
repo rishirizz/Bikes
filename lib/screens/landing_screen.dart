@@ -2,9 +2,10 @@ import 'package:enfield_collection/screens/bike_collection.dart';
 import 'package:enfield_collection/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 
-
 class LandingScreen extends StatefulWidget {
   const LandingScreen({super.key});
+
+  static const routeName = '/landing';
 
   @override
   State<LandingScreen> createState() => _LandingScreenState();
