@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Oxygen',
       ),
-      home: const SplashScreen(),
+      home: const LandingScreen(),
       onGenerateRoute: (settings) {
         var routes = <String, WidgetBuilder>{
           SplashScreen.routeName: (BuildContext context) =>
