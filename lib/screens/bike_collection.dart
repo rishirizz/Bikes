@@ -8,7 +8,7 @@ class BikesCollection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 144, 156, 234),
+        backgroundColor: const Color(0xff100e1c),
         body: Column(
           children: [
             const SizedBox(
@@ -37,11 +37,13 @@ class BikesCollection extends StatelessWidget {
                             prefixIcon: Icon(
                               Icons.search,
                               size: 26,
+                              color: Color(0xff100e1c),
                             ),
                             contentPadding: EdgeInsets.all(10),
                             hintText: 'Search your favorite bike',
                             hintStyle: TextStyle(
                               fontSize: 12,
+                              color: Color(0xff100e1c),
                             ),
                           ),
                         ),

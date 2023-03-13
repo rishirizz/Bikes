@@ -31,7 +31,7 @@ class _BikeDetailsScreenState extends State<BikeDetailsScreen> {
         body: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Stack(
                 children: [
                   Image.asset(
@@ -103,14 +103,67 @@ class _BikeDetailsScreenState extends State<BikeDetailsScreen> {
               ),
             ),
             Expanded(
-              flex: 3,
+              flex: 2,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 144, 156, 234),
+                  // color: Color.fromARGB(255, 144, 156, 234),
+                  color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    20,
+                    20,
+                    20,
+                    0,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        bike!.bikeName!,
+                        style: const TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff100e1c),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const Text(
+                        'Royal Enfield has a wide range of bikes that cater to different needs and preferences. The most popular models include the Classic, Bullet, Himalayan, and Interceptor. The Classic is a retro-style bike with a vintage design that pays homage to Royal Enfield\'s heritage. The Bullet, on the other hand, is a more traditional-looking motorcycle that has been around since the 1930s. The Himalayan is a dual-sport bike that is designed for adventure and off-road riding, while the Interceptor is a modern classic bike with a retro design and modern technology.',
+                        style: TextStyle(
+                          color: Color(0xff100e1c),
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.left,
+                      ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xff100e1c),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: const Padding(
+                          padding:  EdgeInsets.all(8.0),
+                          child:  Text(
+                            'BOOK RESERVATION',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
